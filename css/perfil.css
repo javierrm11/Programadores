@@ -1,0 +1,148 @@
+@import url('header.css');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /*Conseguimos que las cajas no se desborden*/
+}
+
+/*contenido*/
+.container {
+    margin: 3%;
+    background-color: #ec040015;
+    width: 94%;
+    padding: 3%;
+}
+.titulo-h2 {
+    font-size: 1.5em;
+    padding: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ec0200;
+}
+.perfil-grup {
+    margin-left: 4%;
+    display: flex;
+}
+.perfil-grup img {
+    width: 40%;
+    height: auto;
+}
+.perfil {
+    width: 60%;
+    margin-left: 2%;
+}
+.nombre-usuario {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+}
+.pro-div {
+    display: flex;
+    align-items: center;
+}
+.pro-div h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+.pro-div i {
+    align-self: center;
+}
+.descripcion h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+}
+.descripcion {
+    padding: 2%;
+}
+.descripcion p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+}
+.pro-div2 {
+    display: flex;
+    align-items: center;
+    place-content: center;
+}
+.pro-div2 h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+.editar {
+    padding: 1%;
+    border: 2px solid;
+    border-image: linear-gradient(45deg, #ec0200, black, #ec0200) 2;
+    background: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-decoration: none;
+}
+/*usuario*/
+.nombre-usuario-usu {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+}
+.perfil-usuario {
+    width: 100%;
+    margin: 2%;
+}
+.descripcion-usu h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+}
+.descripcion-usu{
+    margin-bottom: inherit;
+}
+
+.descripcion-usu p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+}
+.pro-div-inte {
+    padding: 2%;
+}
+.pro-div-inte {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+.intereses {
+    margin-top: 2%;
+}
+.intereses h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.volver {
+    padding: 1% 1%;
+    background-color: #ec0200;
+    color: white;
+    font-size: 1.1em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    /* margin-left: 10%; */
+    margin-top: 2%;
+    width: fit-content;
+}
+.iniciar {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 6%;
+}
+.iniciosesion {
+    padding: 1% 1%;
+    color: #ec0200;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    /* margin-left: 10%; */
+    width: fit-content;
+}
+
+/*fin contenido*/

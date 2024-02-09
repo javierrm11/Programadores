@@ -1,0 +1,242 @@
+@import url('header.css');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /*Conseguimos que las cajas no se desborden*/
+}
+
+
+/*contenido*/
+.inicio {
+    background-color: black;
+    display: flex;
+}
+.texto {
+    padding: 10%;
+}
+.texto h2 {
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: #ec0200;
+    width: 90%;
+}
+.texto p {
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+.texto button {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2%;
+    color: rgba(255, 255, 255, 0.89);
+    border: 2px solid;
+    border-image: linear-gradient(45deg, black, #ec0200, black) 2;
+    background-color: transparent;
+    margin: 1% 0 0 0;
+}
+.inicio img {
+    width: 30%;
+    padding: 2%;
+}
+
+.titulo {
+    display: flex;
+}
+.h1-1 {
+    font-size: 2.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    color: white;
+}
+.h1-2 {
+    font-size: 2.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    color:#ec0200;
+}
+
+.desarrolladores {
+    border: 2px solid;
+    border-image: linear-gradient(45deg, #ec0200, white, #ec0200) 2;
+    margin: 9%;
+    text-align: -webkit-center;
+    
+}
+.desarrolladores h3 {
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: #ec0200;
+    text-align: center;
+    margin: 4%;
+}
+.profesionales {
+    margin: 3%;
+    display: flex;
+    flex-flow: wrap
+}
+.profesional {
+    width: 29%;
+    margin: 2%;
+    border-radius: 2em;
+    box-shadow: 5px 5px 2px 0px grey;
+    height: fit-content;
+    padding-bottom: 2%;
+}
+.profesional img {
+    height: 200px;
+    width: 100%;
+    border-radius: 2em 2em 0 0;
+    object-fit: cover;
+}
+.profesional-titulo {
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    color: black;
+    text-align: left;
+    margin: 5% 0 5% 5%;
+}
+.pro-div {
+    display: flex;
+    margin: 0 0 0 2%;
+}
+.fa-sm {
+    align-self: flex-end;
+    margin: 10px;
+}
+
+.correo {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+.tlf {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    align-self: center;
+}
+.pais {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    align-self: center;
+}
+.espe {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    margin: 3% 0 0 2%;
+}
+
+.form-divfoto {
+    margin: 2% 10% 2% 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.calificador {
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.estrellas {
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.estrella {
+    color: #ffcc00;
+    margin: 0 5px;
+}
+
+
+.form2{
+    text-align: center;
+    width: 40%;
+    padding: 2%;
+    margin: 2%;
+    border-radius: 1em;
+    box-shadow: 3px 3px 0px 0px grey;
+}
+h4 {
+    color: gold;
+    font-size: 1.8em;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.form2 select {
+    padding: 2%;
+    color: black;
+    background-color: transparent;
+    border: 2px;
+    border: 2px solid;
+    border-image: linear-gradient(45deg, gold, white, gold) 2;
+    margin: 3%;
+
+}
+.form2 input {
+    padding: 1.5%;
+    margin: 2%;
+    color: goldenrod;
+    font-size: 1.1em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+    border: 2px;
+    border: 2px solid;
+    border-image: linear-gradient(45deg, goldenrod, black, goldenrod) 2;
+}
+.form3 {
+    width: 60%;
+    border: 2px solid;
+    border-image: linear-gradient(45deg, gold, white, gold) 2;
+    padding: 2%;
+    margin: 2%;
+}
+.grupoform {
+    display: flex;
+    margin: 2%;
+    place-content: center;
+}
+.form3 label {
+    font-family: arial;
+    width: 50%;
+    place-self: center;
+}
+.form3 select {
+    padding: 1%;
+    color: black;
+    background-color: transparent;
+    border: 2px;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(45deg, #ec0200, black, #ec0200) 2;
+    margin: 3%;
+    width: 50%;
+}
+.form-grup {
+    display: flex;
+}
+.submit {
+    padding: 1%;
+    font-size: 1.1em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+    border: 2px;
+    border: 2px solid;
+    border-image: linear-gradient(90deg, goldenrod, black, goldenrod) 2;
+}
+.mostrar-mas {
+    font-size: 1.5em;
+    text-decoration: none;
+    padding: 2%;
+    margin: 2% 0 2% 0;
+    color: #ec0200;
+    background-color: #eee;
+}
+
+/*fin contenido*/

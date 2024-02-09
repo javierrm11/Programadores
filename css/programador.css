@@ -1,0 +1,102 @@
+@import url('header.css');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /*Conseguimos que las cajas no se desborden*/
+}
+
+/*contenido*/
+.profesional {
+    margin: 3%;
+    display: flex;
+}
+.profesional img {
+    width: 50%;
+}
+.desa-info {
+    width: 50%;
+    margin: 3%;
+}
+.profesional-titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7em;
+    color: #ec0200;
+}
+.pro-div {
+    display: flex;
+    margin-top: 2%;
+}
+.correo, .tlf, .pais, .espe {
+    margin-left: 2%;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.pro-div i {
+    align-self: center;
+}
+
+
+.estrellas {
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.estrella {
+    color: #ffcc00;
+    margin: 0 5px;
+}
+.opiniones, .añadir-opi {
+    margin-top: 2%;
+    padding: 2%;
+}
+.opiniones h5, .añadir-opi h5 {
+    font-size: 1.7em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ec0200;
+    text-align: center;
+}
+.feedback {
+    margin-top: 2%;
+    padding: 2%;
+    background-color: rgba(83, 83, 83, 0.114);
+    border-radius: 0.2em;
+}
+.usuarioenvio {
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ff0000;
+    border-bottom: 2px solid #000000;
+}
+.feedback-p{
+    margin-top: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#fedd {
+    width: 100%;
+    margin-top: 2%;
+}
+.submit {
+    padding: 2%;
+    color: black;
+    background-color: transparent;
+    border: 2px;
+    border: 2px solid;
+    border-image: linear-gradient(45deg, #ec0200, white, #ec0200) 2;
+    margin-top: 3%;
+}
+
+.volver {
+    padding: 2%;
+    background-color: #ec0200;
+    color: white;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    /* margin-left: 10%; */
+    margin-top: 2%;
+
+}
+
+
+/*fin contenido*/

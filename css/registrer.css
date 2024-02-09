@@ -1,0 +1,118 @@
+@import url('header.css');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /*Conseguimos que las cajas no se desborden*/
+}
+
+
+/*contenido*/
+form {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+form h2 {
+    color: #ec0200;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding: 2% 0 1% 0;
+}
+.formulario {
+    width: 70%;
+    border: 2px solid;
+    border-image: linear-gradient(45deg, white, #ec0200, white) 2;
+    padding: 2%;
+    margin: 0 0 2% 0;
+}
+form h3 {
+    color: black;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.form-div {
+    margin: 2% 10% 2% 10%;
+    display: flex;
+    flex-direction: column;
+}
+.form-div input {
+    padding: 1%;
+    border: 2px solid #ec0200;
+    background-color: transparent;
+    border-radius: 2em;
+    color: rgba(0, 0, 0, 0.726);
+    margin: 2% 1% 0 0;
+}
+.profesiones {
+    display: flex;
+}
+.label {
+    color: rgba(0, 0, 0, 0.707);
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    align-self: flex-end;
+}
+.div-mas {
+    display: none;
+    margin: 2% 10% 2% 10%;
+    width: 100%;
+}
+.div-mas input {
+    padding: 1%;
+    border: 2px solid #ec0200;
+    background-color: transparent;
+    border-radius: 2em;
+    color: rgba(0, 0, 0, 0.726);
+    margin: 2% 1% 0 0;
+    width: 80%;
+}
+.desarrollodiv {
+    display: flex;
+}
+.desarrollodiv input {
+    width: 3%;
+}
+
+.trabajo {
+    display: flex;
+}
+.div-mas2 {
+    display: none;
+}
+input#password.formfoto {
+    padding: 1%;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.726);
+    margin: 2% 1% 0 0;
+}
+.form-divfoto {
+    margin: 2% 10% 2% 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*js*/
+.falla{
+    color: #ec0200;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1%;
+}
+
+.volver {
+    color: #ec0200;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    
+}
+/*fin contenido*/
