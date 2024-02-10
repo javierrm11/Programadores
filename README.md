@@ -7,6 +7,19 @@ Realiza una Página web para nuestra empresa, la página web será una red socia
 - En la página principal tendrá para hacer una votacion a los desarrolladores, máximo 1 votacion de un usuario a 1 desarrollador y para filtrar los desarrolladores.
 - Habrá una pagina para cada desarrollador y se podrá hacer un feedback de él.
 - Página perfil: Aparecerá la información del usuario en sesión y si no está en sesión aparecerá un botón para que se pueda loguear.
-  - ho
+  - Tendrá un botón para editar su perfil.
+    - Aparecera para editar los campos de la tabla que se ha logueado: cliente o desarrollador.
+    - Se podrá cambiar de usuario a desarrollador y viceversa.
+    - Cada campo que se rellene se validará.
+  - Tendrá un boón para volver a la página principal.
+- Página Mensajes
+  - Podrá enviar un mensaje a cualquier usuario.
+  - El campo del mensaje se validará si es <20 caracteres
+### Para el proyecto se realizará con los lenguajes:
+- HTML
+- CSS
+- JS
+- PHP
+- SQL
   
 
