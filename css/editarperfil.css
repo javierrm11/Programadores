@@ -116,3 +116,15 @@ p {
 
 
 /*fin contenido*/
+@media only screen and (max-width: 700px) {
+    .titulo-h2{
+        padding: 4%;
+    }
+    .form-div, .form-divfoto{
+        margin: 4% 10% 4% 10%;
+    }
+    form h3 {
+        font-size: 1.1em;
+    }
+
+} 

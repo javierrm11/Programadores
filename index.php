@@ -19,7 +19,7 @@ session_start();
 
     <?php
     $usuario = $_SESSION['usuario'] ?? "";
-    $conexion = mysqli_connect('localhost', 'id21812402_javier', 'Jrr#108vivi', 'id21812402_proyecto');
+    $conexion = mysqli_connect('172.17.0.2', 'root', 'Jrr#108vivi', 'docker');
 
     if ($conexion) {
         $sql = "SELECT usuario FROM desarrolladores";
@@ -61,38 +61,47 @@ session_start();
     }
     ?>
 
-    <header>
+<header>
         <div class="header">
-            <a href="#" class="headera">Desarrolladores</a><a href="#" class="headera2">.NET</a>
-            <nav class="nav">
-                <div class="subnav">
-                    <button class="subnavbtn">Inicio <i class="fa fa-caret-down"></i></button>
-                    <div class="subnav-content">
-                        <a href="#">Dashboard</a>
-                        <a href="./html/perfil.php">Perfil</a>
-                        <a href="./html/mensajes.php">Mensajes</a>
-                    </div>
+            <div class="titulos">
+                <div class="titulo-ab">
+                    <a href="index.php" class="headera">Desarrolladores</a>
+                    <a href="index.php" class="headera2">.NET</a>
                 </div>
-                <a href="">Servicios</a>
-                <a href="">Acerca de</a>
-                <a href="">Contato</a>
-            </nav>
-            <div class="usuario">
-                <?php
-                if (isset($_SESSION['usuario'])) {
+                <div class="usuario" id="usuario">
+                    <?php
+                    if (isset($_SESSION['usuario'])) {
                     ?>
                     <div class="usuariom">
-                        <a id="usuarios"><?php echo $_SESSION['usuario'];?></a>
+                        <a href="./html/perfil.php"id="usuarios"><?php echo $_SESSION['usuario'];?></a>
                         <a href="./php/cerrar.php" >Cerrar sesión</a>
                     </div> 
                     <?php
                 } else {
                     ?>
                     <a id="sesion" href="./html/login.php">Inicia Sesión</a>
-                    <a id="sesion" href="./html/registrer.php">Regístrate</a>
+                    <a id="sesion" href="./html/registrer.php">Registrate</a>
                     <?php
                 }
                 ?>
+                </div>
+            </div>
+            <div class="container-header">
+                <nav class="nav">
+                    <div class="subnav">
+                        <button class="subnavbtn">Inicio <i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content">
+                            <a href="index.php">Dashboard</a>
+                            <a href="./html/perfil.php">Perfil</a>
+                            <a href="./html/mensajes.php">Mensajes</a>
+                        </div>
+                    </div>
+                    <a href="">Servicios</a>
+                    <a href="">Acerca de</a>
+                    <a href="">Contacto</a>
+                </nav>
+                
+                <script src="../js/menu.js"></script>
             </div>
         </div>
     </header>
@@ -115,16 +124,11 @@ session_start();
 
             <div class="grupoform">
                 <?php
+                $consulta_desa = "SELECT * FROM desarrolladores WHERE usuario = '$usuario'";
+                $resultado_desa = mysqli_query($conexion, $consulta_desa);
                 if ($usuario == "") {
-                }
-
-                else {
-                    $consulta_desa = "SELECT * FROM desarrolladores WHERE usuario = '$usuario'";
-                    $resultado_desa = mysqli_query($conexion, $consulta_desa);
-                    if(mysqli_num_rows($resultado_desa) > 0){
-
-                    } else {
-                ?>
+                } elseif(mysqli_num_rows($resultado_desa) > 0) {
+                    ?>
                     <form action="./php/calificacion.php" method="post" class="form2">
                         <h4 for="estrellas">Hacer votación</h4>
                         <?php
@@ -145,7 +149,10 @@ session_start();
                         </select>
                         <input type="submit" value="Votar">
                     </form>
-                <?php } }?>
+                <?php
+                }
+                else {
+                 }?>
 
                 <form action="index.php" method="post" onchange="guardarSeleccion()" class="form3">
                     <h4>Filtros</h4>
@@ -159,7 +166,7 @@ session_start();
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="filtrarValoracion">Filtrar por Valoración:</label>
+                        <label for="filtrarValoracion">Filtrar por Calificacion:</label>
                         <select id="filtrarValoracion" name="filtrarValoracion">
                             <option value="todos">Todos</option>
                             <option value="0">0</option>
@@ -187,7 +194,7 @@ session_start();
 
             <section class="profesionales">
                 <?php
-                $conexion = mysqli_connect('localhost', 'id21812402_javier', 'Jrr#108vivi', 'id21812402_proyecto');
+                
 
                 if ($conexion) {
                     $especialidades_usuario = [];
@@ -265,7 +272,7 @@ session_start();
                                     <h4 class="pais"><?php echo $pais ?></h4>
                                 </div>
                                 <div class="pro-div">
-                                    <h4 class="espe">#</h4>
+                                    <h4 class="espe-bt">#</h4>
                                     <h4 class="espe"><?php echo $especialidad ?></h4>
                                 </div>
 

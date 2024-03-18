@@ -58,6 +58,7 @@
 .descripcion p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.1em;
+    word-wrap: break-word;
 }
 .pro-div2 {
     display: flex;
@@ -100,6 +101,7 @@
 .descripcion-usu p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.1em;
+    word-wrap: break-word;
 }
 .pro-div-inte {
     padding: 2%;
@@ -146,3 +148,18 @@
 }
 
 /*fin contenido*/
+@media only screen and (max-width: 700px) {
+    .perfil-grup{
+        flex-direction: column;
+    }
+    .perfil-grup img{
+        width: 100%;
+    }
+    .perfil{
+        margin-top: 4%;
+        width: 100%;
+    }
+    .pro-div2 h4 {
+        font-size: 1em;
+    }
+}  

@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-$conectio = mysqli_connect('localhost', 'id21812402_javier', 'Jrr#108vivi', 'id21812402_proyecto');
+$conectio = mysqli_connect('172.17.0.2', 'root', 'Jrr#108vivi', 'docker');
 insertar($conectio);
 
 function insertar($conectio){

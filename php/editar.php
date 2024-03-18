@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Establecer la conexión a la base de datos
-$conectio = mysqli_connect('localhost', 'id21812402_javier', 'Jrr#108vivi', 'id21812402_proyecto') or die(mysqli_connect_error());
+$conectio = mysqli_connect('172.17.0.2', 'root', 'Jrr#108vivi', 'docker');
 
 // Iniciar sesión
 session_start();

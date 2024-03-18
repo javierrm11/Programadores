@@ -16,7 +16,7 @@ session_start();
 </head>
 <body onload="cargarSeleccion()">
     <?php
-    $conectio = mysqli_connect('localhost', 'id21812402_javier', 'Jrr#108vivi', 'id21812402_proyecto');
+    $conectio = mysqli_connect('172.17.0.2', 'root', 'Jrr#108vivi', 'docker');
     if ($conectio) {
         $sql = "SELECT usuario FROM desarrolladores";
         $result = $conectio->query($sql);
@@ -30,39 +30,46 @@ session_start();
         $conectio->query($sql_update);
     }
     ?>
-    <header>
-        <div class="header">
-            <a href="../index.php" class="headera">Desarrolladores</a>
-            <a href="../index.php" class="headera2">.NET</a>
-            <nav class="nav">
-                <div class="subnav">
-                    <button class="subnavbtn">Inicio <i class="fa fa-caret-down"></i></button>
-                    <div class="subnav-content">
-                        <a href="../index.php">Dashboard</a>
-                        <a href="./perfil.php">Perfil</a>
-                        <a href="./mensajes.php">Mensajes</a>
-                    </div>
+    <div class="header">
+            <div class="titulos">
+                <div class="titulo-ab">
+                    <a href="../index.php" class="headera">Desarrolladores</a>
+                    <a href="../index.php" class="headera2">.NET</a>
                 </div>
-                <a href="">Servicios</a>
-                <a href="">Acerca de</a>
-                <a href="">Contato</a>
-            </nav>
-            <div class="usuario">
-                <?php
-                if (isset($_SESSION['usuario'])) {
+                <div class="usuario" id="usuario">
+                    <?php
+                    if (isset($_SESSION['usuario'])) {
                     ?>
                     <div class="usuariom">
-                        <a id="usuarios"><?php echo $_SESSION['usuario'];?></a>
-                        <a href="../php/cerrar.php" >Cerrar sesion</a>
-                    </div>
+                        <a href="../html/perfil.php"id="usuarios"><?php echo $_SESSION['usuario'];?></a>
+                        <a href="../php/cerrar.php" >Cerrar sesión</a>
+                    </div> 
                     <?php
                 } else {
                     ?>
-                    <a id="sesion" href="./login.php">Inicia Sesión</a>
-                    <a id="sesion" href="./registrer.php">Regístrate</a>
+                    <a id="sesion" href="../html/login.php">Inicia Sesión</a>
+                    <a id="sesion" href="../html/registrer.php">Registrate</a>
                     <?php
                 }
                 ?>
+                </div>
+            </div>
+            <div class="container-header">
+                <nav class="nav">
+                    <div class="subnav">
+                        <button class="subnavbtn">Inicio <i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content">
+                            <a href="../index.php">Dashboard</a>
+                            <a href="../html/perfil.php">Perfil</a>
+                            <a href="../html/mensajes.php">Mensajes</a>
+                        </div>
+                    </div>
+                    <a href="">Servicios</a>
+                    <a href="">Acerca de</a>
+                    <a href="">Contacto</a>
+                </nav>
+                
+                <script src="../js/menu.js"></script>
             </div>
         </div>
     </header>
@@ -70,7 +77,7 @@ session_start();
     <main>
         <?php if (!isset($_SESSION['usuario'])) { ?>
             <div class="iniciar">
-                <a href="./login.php" class="iniciosesion">Necesitas Iniciar Sesión, pincha aquí.</a>
+                <a href="../html/login.php" class="iniciosesion">Necesitas Iniciar Sesión, pincha aquí.</a>
                 <a href="../index.php" class="volver">Volver</a>
             </div>
         <?php } else { ?>
@@ -84,7 +91,7 @@ session_start();
                         $resultadoDesarrolladores = $conectio->query("SELECT usuario FROM usuariototales WHERE usuario != '$usuario'");
                         $desarrolladores = $resultadoDesarrolladores->fetch_all(MYSQLI_ASSOC);
                         ?>
-                        <h4 class="usuario">Nombre de Usuario:</h4>
+                        <h4 class="usuario-a">Nombre de Usuario:</h4>
                         <select id="desarrollador" name="desarrollador" required>
                             <?php foreach ($desarrolladores as $desarrollador) : ?>
                                 <option value="<?php echo $desarrollador['usuario']; ?>"><?php echo $desarrollador['usuario']; ?></option>
@@ -121,8 +128,8 @@ session_start();
                                 $hora = $row['fecha_envio'];
                                 ?>
                                 <div class="mensaje">
-                                    <p class="usuarioenvio">De: <?php echo $usuarioenvia ?></p>
-                                    <p class="mensaje-p">Mensaje: <?php echo $mensaje ?></p>
+                                    <p class="usuarioenvio"><?php echo $usuarioenvia ?></p>
+                                    <p class="mensaje-p"><?php echo $mensaje ?></p>
                                     <p class="hora"><?php echo $hora ?></p>
                                 </div>
                                 <?php
@@ -146,8 +153,8 @@ session_start();
                                 $hora = $row['fecha_envio'];
                                 ?>
                                 <div class="mensaje">
-                                    <p class="usuarioenvio">A: <?php echo $usuariorecibe ?></p>
-                                    <p class="mensaje-p">Mensaje: <?php echo $mensaje ?></p>
+                                    <p class="usuarioenvio"><?php echo $usuariorecibe ?></p>
+                                    <p class="mensaje-p"><?php echo $mensaje ?></p>
                                     <p class="hora"><?php echo $hora ?></p>
                                 </div>
                                 <?php

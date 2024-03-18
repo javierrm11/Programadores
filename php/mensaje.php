@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 session_start();
 // Obtiene el ID del usuario (puedes ajustar esto según tu sistema de autenticación)
-$conectio = mysqli_connect('localhost', 'id21812402_javier', 'Jrr#108vivi', 'id21812402_proyecto') or die(mysql_error($mysqli));
+$conectio = mysqli_connect('172.17.0.2', 'root', 'Jrr#108vivi', 'docker');
 $usuarioenvia = $_SESSION['usuario'];
 $consultaUsuario = "SELECT * FROM usuariototales WHERE usuario = '$usuarioenvia'";
 $resultadoUsuario = mysqli_query($conectio, $consultaUsuario);
@@ -18,7 +18,4 @@ if (mysqli_num_rows($resultadoUsuario) > 0) {
 } else {
     echo "El usuario que envía el mensaje no existe.";
 }
-
-
-// Cerrar la conexión
 ?>

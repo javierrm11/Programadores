@@ -1,7 +1,7 @@
 <?php
 session_start();
 // Conecta a la base de datos
-$conexion = mysqli_connect('localhost', 'id21812402_javier', 'Jrr#108vivi', 'id21812402_proyecto');
+$conexion = mysqli_connect('172.17.0.2', 'root', 'Jrr#108vivi', 'docker');
 
 $usuario = $_POST['usuario'];
 $contraseña = $_POST['contraseña'];

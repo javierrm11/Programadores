@@ -66,3 +66,21 @@ p {
 }
 
 /*fin contenido*/
+@media only screen and (max-width: 650px) {
+    form h2{
+        font-size: 1.7em;
+    }
+    .form-div{
+        padding: 2% 0;
+    }
+    .formulario{
+        padding: 6% 0;
+    }
+    .form-div input{
+        padding: 2%;
+        font-size: 1.1em;
+    }
+    form h3 {
+        font-size: 1.1em;
+    }
+}  

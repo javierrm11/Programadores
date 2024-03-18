@@ -9,38 +9,31 @@
     <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-    <header>
+<header>
+<header>
         <div class="header">
-            <a href="../index.php" class="headera">Desarrolladores</a><a href="../index.php" class="headera2">.NET</a>
-            <nav class="nav">
-                <div class="subnav">
-                    <button class="subnavbtn">Inicio <i class="fa fa-caret-down"></i></button>
-                    <div class="subnav-content">
-                        <a href="../index.php">Dashboard</a>
-                        <a href="./perfil.php">Perfil</a>
-                        <a href="./mensajes.php">Mensajes</a>
-                    </div>
+            <div class="titulos">
+            <div class="titulo-ab">
+                    <a href="../index.php" class="headera">Desarrolladores</a>
+                    <a href="../index.php" class="headera2">.NET</a>
                 </div>
-                <a href="">Servicios</a>
-                <a href="">Acerca de</a>
-                <a href="">Contanto</a>
-            </nav>
-            <div class="usuario">
-                <?php
-                if (isset($_SESSION['usuario'])) {
-                    ?>
-                    <div class="usuariom">
-                        <a id="usuarios"><?php echo $_SESSION['usuario'];?></a>
-                        <a href="../php/cerrar.php" >Cerrar sesión</a>
-                    </div> 
-                    <?php
-                } else {
-                    ?>
-                    <a id="sesion" href="./login.php">Inicia Sesión</a>
-                    <a id="sesion" href="./registrer.php">Registrate</a>
-                    <?php
-                }
-                ?>
+            </div>
+            <div class="container-header">
+                <nav class="nav">
+                    <div class="subnav">
+                        <button class="subnavbtn">Inicio <i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content">
+                            <a href="../index.php">Dashboard</a>
+                            <a href="../html/perfil.php">Perfil</a>
+                            <a href="../html/mensajes.php">Mensajes</a>
+                        </div>
+                    </div>
+                    <a href="">Servicios</a>
+                    <a href="">Acerca de</a>
+                    <a href="">Contacto</a>
+                </nav>
+            
+                <script src="../js/menu.js"></script>
             </div>
         </div>
     </header>

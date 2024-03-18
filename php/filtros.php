@@ -1,5 +1,5 @@
 <?php
-$conectio = mysqli_connect('localhost', 'id21812402_javier', 'Jrr#108vivi', 'id21812402_proyecto') or die(mysql_error($mysqli));
+$conectio = mysqli_connect('172.17.0.2', 'root', 'Jrr#108vivi', 'docker');
 $especialidad = $_POST['filtrarEspecialidad'];
 
 // Construir la consulta SQL
