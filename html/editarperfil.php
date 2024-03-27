@@ -15,7 +15,7 @@ session_start();
 </head>
 <body>
 <?php  
-    $conectio = mysqli_connect('172.17.0.2', 'root', 'Jrr#108vivi', 'docker');
+    $conectio = mysqli_connect('sql113.infinityfree.com', 'if0_36209740', 'Jrr108vivi', 'if0_36209740_programadores');
     
     $usuario = $_SESSION['usuario'];
     $consulta = mysqli_query($conectio, "SELECT * FROM usuarios where usuario = '$usuario'");

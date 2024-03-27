@@ -1,14 +1,14 @@
 <?php
 session_start();
 // Conecta a la base de datos
-$conexion = mysqli_connect('172.17.0.2', 'root', 'Jrr#108vivi', 'docker');
+$conexion = mysqli_connect('sql113.infinityfree.com', 'if0_36209740', 'Jrr108vivi', 'if0_36209740_programadores');
 
 $usuario = $_POST['usuario'];
 $contraseña = $_POST['contraseña'];
 
 
-$consulta = mysqli_query($conexion, "SELECT * FROM usuarios where usuario = '$usuario' and contraseña = '$contraseña'");
-$consulta2 = mysqli_query($conexion, "SELECT * FROM desarrolladores where usuario = '$usuario' and contraseña = '$contraseña'");
+$consulta = mysqli_query($conexion, "SELECT * FROM usuarios where usuario = '$usuario' and contrasena = '$contraseña'");
+$consulta2 = mysqli_query($conexion, "SELECT * FROM desarrolladores where usuario = '$usuario' and contrasena = '$contraseña'");
 // Inicializar la respuesta
 $respuesta = array('autenticado' => false);
 

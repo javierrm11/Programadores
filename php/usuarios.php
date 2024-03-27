@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-$conectio = mysqli_connect('172.17.0.2', 'root', 'Jrr#108vivi', 'docker');
+$conectio = mysqli_connect('sql113.infinityfree.com', 'if0_36209740', 'Jrr108vivi', 'if0_36209740_programadores');
 insertar($conectio);
 
 function insertar($conectio){
@@ -39,7 +39,7 @@ function insertar($conectio){
         $especialidad = $_POST['trabajo'] ?? '';
         $consultaini = "INSERT INTO usuariototales(usuario) VALUES('$usuario')";
         mysqli_query($conectio, $consultaini);
-        $consulta2 = "INSERT INTO desarrolladores(usuario, correo, tlf, pais, imagen, especialidad, contraseña, descripcion, mediavota)
+        $consulta2 = "INSERT INTO desarrolladores(usuario, correo, tlf, pais, imagen, especialidad, contrasena, descripcion, mediavota)
         VALUES('$usuario', '$correo', '$tlf', '$pais', '$imagen_contenido', '$especialidad', '$contraseña', '$descripcion', 0)";
         mysqli_query($conectio, $consulta2);
         header("location: ../html/login.php");
@@ -49,7 +49,7 @@ function insertar($conectio){
         $desarrollomovil = isset($_POST['desarrollomovil']) ? 'si' : 'no';
         $consultaini = "INSERT INTO usuariototales(usuario) VALUES('$usuario')";
         mysqli_query($conectio, $consultaini);
-        $consulta2 = "INSERT INTO usuarios(usuario, correo, desarrolloweb, desarrollomulti, desarrollomovil, contraseña)
+        $consulta2 = "INSERT INTO usuarios(usuario, correo, desarrolloweb, desarrollomulti, desarrollomovil, contrasena)
         VALUES('$usuario', '$correo', '$desarrolloweb', '$desarrollomulti', '$desarrollomovil', '$contraseña')";
         mysqli_query($conectio, $consulta2);
         header("location: ../html/login.php");

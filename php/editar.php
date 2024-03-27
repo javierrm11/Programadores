@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Establecer la conexión a la base de datos
-$conectio = mysqli_connect('172.17.0.2', 'root', 'Jrr#108vivi', 'docker');
+$conectio = mysqli_connect('sql113.infinityfree.com', 'if0_36209740', 'Jrr108vivi', 'if0_36209740_programadores');
 
 // Iniciar sesión
 session_start();
@@ -96,7 +96,7 @@ if (mysqli_num_rows($resultadoDesarrollador) > 0) {
                 $desarrollomovilnuevo = $_POST["desarrollomovil"];
             }
 
-            $consultausuarioinse = "INSERT INTO usuarios (usuario, correo,  desarrolloweb, desarrollomulti, desarrollomovil, contraseña) 
+            $consultausuarioinse = "INSERT INTO usuarios (usuario, correo,  desarrolloweb, desarrollomulti, desarrollomovil, contrasena) 
             VALUES ('$usuarionuevo', '$correonuevo', '$desarrollowebnuevo', '$desarrollomultinuevo', '$desarrollomovilnuevo', '$contraseñanuevo')";
             mysqli_query($conectio, $consultausuarioinse);
 
@@ -106,7 +106,7 @@ if (mysqli_num_rows($resultadoDesarrollador) > 0) {
             header("location: ../html/perfil.php");
             }else {
                 $consulta = "UPDATE desarrolladores SET usuario = '$usuarionuevo', correo = '$correonuevo', tlf = $tlfnuevo, pais = '$paisnuevo', imagen = ?,
-                especialidad = '$especialidadnuevo', contraseña = '$contraseñanuevo', descripcion = '$descripcionnuevo' WHERE usuario = '$usuario'";
+                especialidad = '$especialidadnuevo', contrasena = '$contraseñanuevo', descripcion = '$descripcionnuevo' WHERE usuario = '$usuario'";
                 $declaracion = mysqli_prepare($conectio, $consulta);
                 mysqli_stmt_bind_param($declaracion, "s", $imagennuevo);
                 mysqli_stmt_send_long_data($declaracion, 4, $imagennuevo);
@@ -194,7 +194,7 @@ if (mysqli_num_rows($resultadoDesarrollador) > 0) {
                 $descripcionnuevo = $_POST["Descripcion"];
             }
 
-            $consultainse = "INSERT INTO desarrolladores (usuario, correo, tlf, pais, imagen, especialidad, contraseña, descripcion, mediavota, num_feedback) 
+            $consultainse = "INSERT INTO desarrolladores (usuario, correo, tlf, pais, imagen, especialidad, contrasena, descripcion, mediavota, num_feedback) 
             VALUES ('$usuarionuevo', '$correonuevo', $tlfnuevo, '$paisnuevo', ?, '$especialidadnuevo', '$contraseñanuevo', '$descripcionnuevo', 0, 0)";
             $declaracion = mysqli_prepare($conectio, $consultainse);
             mysqli_stmt_bind_param($declaracion, "s", $imagennuevo);
@@ -211,7 +211,7 @@ if (mysqli_num_rows($resultadoDesarrollador) > 0) {
 
         // Actualizar información del cliente en la tabla 'usuarios'
         $consulta = "UPDATE usuarios SET usuario = '$usuarionuevo', correo = '$correonuevo', desarrolloweb = '$desarrollowebnuevo', desarrollomulti = '$desarrollomulti',
-        desarrollomovil = '$desarrollomovilnuevo', contraseña = '$contraseñanuevo' WHERE usuario = '$usuario'";
+        desarrollomovil = '$desarrollomovilnuevo', contrasena = '$contraseñanuevo' WHERE usuario = '$usuario'";
 
         mysqli_query($conectio, $consulta);
         header("location: ../html/perfil.php");   

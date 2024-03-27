@@ -16,7 +16,7 @@ session_start();
 </head>
 <body onload="cargarSeleccion()">
     <?php
-    $conectio = mysqli_connect('172.17.0.2', 'root', 'Jrr#108vivi', 'docker');
+    $conectio = mysqli_connect('sql113.infinityfree.com', 'if0_36209740', 'Jrr108vivi', 'if0_36209740_programadores');
     if ($conectio) {
         $sql = "SELECT usuario FROM desarrolladores";
         $result = $conectio->query($sql);
